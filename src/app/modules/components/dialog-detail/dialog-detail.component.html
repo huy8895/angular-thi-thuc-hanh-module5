@@ -14,9 +14,7 @@
       <td>{{data.description}}</td>
     </tr>
   </table>
-
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-raised-button color="warn" [mat-dialog-close]="data" cdkFocusInitial>Delete</button>
-</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

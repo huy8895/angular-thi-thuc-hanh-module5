@@ -8,13 +8,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {DialogEditComponent} from './modules/components/dialog-edit/dialog-edit.component';
-import {DialogDeleteComponent} from './modules/components/dialog-delete/dialog-delete.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import {ListBookComponent} from './modules/components/list-book/list-book.component';
 
 @NgModule({
   declarations: [
+    ListBookComponent,
     AppComponent,
     ],
   imports: [
