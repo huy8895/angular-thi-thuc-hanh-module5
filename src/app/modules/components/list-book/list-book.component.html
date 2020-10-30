@@ -1,0 +1,28 @@
+<div *ngIf="books" class="row"></div>
+<table class="table">
+  <tr>
+    <td colspan="4" *ngIf="books"><h3>Có {{books.length}} quyển sách.</h3></td>
+    <td>
+      <button class="btn btn-success" [routerLink]="['add']">Add</button>
+    </td>
+  </tr>
+  <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let book of books; let i = index">
+    <td>{{i + 1}}</td>
+    <td (click)="showDetail(book)">{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>
+      <button class="btn btn-primary" [routerLink]="[book.id,'edit']">Edit</button>
+    </td>
+    <td>
+      <button class="btn btn-danger mr-2" (click)="openConfirmDeleteDialog(i,book)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+
